@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #FCFFFF;
+        }
+        .navbar{
+            background-color: #EDEBEB;
+
+        }
+        .nav-item{
+            color: #cf4f4f;
+
+
+        }
+        .jumbotron{
+            margin: 0 0 5px 0;
+            height:150px;
+            background-color: white;
+
+        }
+
+
+        .img-fluid{
+            margin-top:-120px;
+
+            margin-left: 1000px;
+            width: 300px;
+            background-color: white;
+        }
+
+        .card-deck{
+            margin-top: 5px;
+            margin-left: 25%;
+            margin-right: 25%;
+
+
+            font-family: "Arial Black";
+        }
+        .container-sm {
+
+            text-align:center;
+
+            font-size: 30px;
+
+
+        }
+        .form-control{
+            width: 25%;
+
+        }
+        .card {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left: 10%;
+
+            border-radius: 50px;
+            background-color:white;
+            width: 100px;
+
+
+        }
+
+        .card:hover {
+            box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .card > .card-inner {
+            padding:10px;
+        }
+        .card .header h2, h3 {
+            margin-bottom: 0px;
+            margin-top:0px;
+            font-size: 15px;
+            color:black;
+        }
+        .card .header {
+            margin-bottom:5px;
+        }
+        .card img{
+            width:100%;
+        }
+        .header{
+            font-size: 5px;
+            font-family: Arial;
+        }
+
+        #sticky-footer {
+            background-color: #EDEBEB;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+<div class="jumbotron">
+    <h1>CDU Course Management System </h1>
+
+    <img src="../logo.jpg" class="img-fluid" alt="Responsive image">
+
+
+</div>
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="level.html">Level<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" >Browse by Study Area</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="container-sm ">Browse by Degree</div>
+    <div class="card-deck">
+        <div class="bs-example_1" style="margin-left: 10px">
+            <div class="card" style="width: 300px;">
+                <a href="index.html"> <img src="edu.jpg" class="card-img-top" alt="..."  style="border-radius: 50px 50px 0 0; height: 300px " ></a>
+                <div class="card-body text-center">
+                    <a href="index.html"> <h5 class="card-title" style="font-size:large; color: black">Master Degree</h5></a>
+
+                    <a href="index.html" class="btn btn-primary stretched-link">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-example_2">
+            <div class="card" style="width: 300px;">
+                <img src="nurse.jpg" class="card-img-top" alt="..." style="border-radius: 50px 50px 0 0 ; height: 300px ">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-size:large">Undergraduate Degree</h5>
+                    
+                    <a href="u_grad.html" class="btn btn-primary stretched-link">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+</div>
+<footer id="sticky-footer" class="py-4  text-black-60">
+
+    <small style="color: black">Copyright &copy; Your Website</small>
+
+</footer>
+</body>
+</html>

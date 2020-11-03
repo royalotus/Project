@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags to make it mobile responsive-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="./redirect.js" type="module"></script>
+    <link rel="stylesheet" id="css-main" href="./css/codebase.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font: 14px Arial;
+        }
+        /*the container must be positioned relative:*/
+        
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+        }
+        
+        input {
+            border: 1px solid transparent;
+            background-color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        input[type=text] {
+            background-color: white;
+            border-top-right-radius: : 5%;
+            border-color: #f1f1f1;
+            width: 100%;
+        }
+        
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+        
+        .summary {
+            margin-bottom: 5rem;
+        }
+        
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        /*when hovering an item:*/
+        
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+        /*when navigating through the items using the arrow keys:*/
+        
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+    <style>
+        #text-red {
+            color: red;
+        }
+        
+        body {
+            background-color: #FCFFFF;
+        }
+        
+        .navbar {
+            background-color: #EDEBEB;
+        }
+        
+        .nav-item {
+            color: #cf4f4f;
+        }
+        
+        .jumbotron {
+            margin: 0 0 5px 0;
+            height: 150px;
+            background-color: white;
+        }
+        
+        .img-fluid {
+            margin-top: -120px;
+            margin-left: 1000px;
+            width: 300px;
+            background-color: white;
+        }
+        
+        .card-deck {
+            margin-top: 5px;
+            margin-left: 25%;
+            margin-right: 25%;
+            font-family: "Arial Black";
+        }
+        
+        .container-sm {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .form-control {
+            width: 25%;
+        }
+        
+        .card {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10%;
+            background-color: white;
+            width: 100px;
+        }
+        
+        .card:hover {
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        
+        .card>.card-inner {
+            padding: 10px;
+        }
+        
+        .card .header h2,
+        h3 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 15px;
+            color: black;
+        }
+        
+        .card .header {
+            margin-bottom: 5px;
+        }
+        
+        .card img {
+            width: 100%;
+        }
+        
+        .header {
+            font-size: 5px;
+            font-family: Arial;
+        }
+        
+        #sticky-footer {
+            background-color: #EDEBEB;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .card-title a:hover {
+            text-decoration: none;
+        }
+        
+        .container {
+            padding: 2rem 0rem;
+        }
+        
+        h4 {
+            margin: 2rem 0rem 1rem;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>CDU Course Management System </h1>
+
+
+        <img src="logo.jpg" class="img-fluid" alt="Responsive image">
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="level.html">Level<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Browse by Study Area</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <p style="text-align: center; font-size:x-large; margin-top: 25px; margin-bottom: 5px"> Status for Students Commencing in <br> Semester 1</p>
+        <!-- Table  -->
+        <div class="container">
+            <table class="table-responsive">
+                <form action="action_handler.php" method="POST">
+                    <table class="table table-bordered  ">
+                        <thead>
+                            <tr style="background-color: #FCFFFF">
+                                <th scope="col">Legend</th>
+                                <th scope="col" style="font-weight:normal">CU = Common Unit</th>
+                                <th scope="col" style="font-weight:normal">CO = Core Unit</th>
+                                <th scope="col" style="font-weight:normal">SE = Specialist Elective</th>
+                                <th scope="col" style="font-weight:normal">E = Elective</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table" style="margin-bottom: 0.5%">
+                        <thead>
+                            <tr style="background-color: #FCFFFF">
+                                <th scope="col" style="text-align: center">Your All Summary </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="col-12">
+                        <table class="table" style="margin-bottom: 0">
+                            <thead>
+                                <tr style="background-color: #FCFFFF">
+                                    <th scope="col-12" style="align-items: left">SEMESTER 1</th>
+                                    <th scope="col-12" style="align-items: right">SEMESTER 2</th>
+
+
+                                </tr>
+                            </thead>
+                        </table>
+                    </table>
+
+
+
+                    <div class="table-responsive">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr style="background-color: #EDEBEB">
+                                            <th scope="col" style="text-align: center">Year 1</th>
+                                            <th scope="col">Legend</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" style="text-align: center">Year 1</th>
+                                            <th scope="col">legend</th>
+                                            <th scope="col">Status</th>
+
+                                            <!-- <th scope="col">Action</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="com_tech"></td>
+                                            <td>CU </td>
+                                            <td id="status_com_tech"></td>
+
+                                            <td id="cult_int"> </td>
+                                            <td>CU</td>
+                                            <td id="status_cult_int"> </td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td id="com_funda"> </td>
+                                            <td>CO</td>
+                                            <td id="status_com_funda"> </td>
+
+                                            <td id="stat"> </td>
+                                            <td>CU</td>
+                                            <td id="status_stat"> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td id="os"></td>
+                                            <td>CO</td>
+                                            <td id="status_os"></td>
+
+                                            <td id="soft_now"></td>
+                                            <td>CO</td>
+                                            <td id="status_soft_now"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td id="myInput1">
+
+                                            </td>
+                                            <td>E </td>
+                                            <td id="status_myInput1">
+                                                <td id="myInput2"></td>
+                                                <td>E </td>
+                                                <td id="status_myInput2"></td>
+                                        </tr>
+                                    </tbody>
+                                    <!--------------------------Year 2------------------------------------------------------->
+                                    <thead>
+                                        <tr style="background-color: #EDEBEB">
+                                            <th scope="col" style="text-align: center">Year 2</th>
+                                            <th scope="col">Legend</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" style="text-align: center">Year 2</th>
+                                            <th scope="col">legend</th>
+                                            <th scope="col">Status</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td id="mob_web"></td>
+                                            <td>CO </td>
+                                            <td id="status_mob_web"></td>
+
+
+                                            <td id="net_eng"> </td>
+                                            <td>CO</td>
+                                            <td id="status_net_eng"> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td id="db_con"> </td>
+                                            <td>CO </td>
+                                            <td id="status_db_con"> </td>
+
+                                            <td id="proj_mgmt"> </td>
+                                            <td>CO</td>
+                                            <td id="status_proj_mgmt"> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td id="sp_ele1">
+                            </div>
+
+                            </td>
+
+
+                            <td>SE </td>
+                            <td id="status_sp_ele1"></td>
+
+                            <td id="sp_ele2">
+
+                        </div>
+
+
+                        </td>
+                        <td>SE </td>
+                        <td id="status_sp_ele2"></td>
+                        </tr>
+                        <tr>
+                            <td id="sp_ele3"></td>
+                            <td>SE </td>
+                            <td id="status_sp_ele3"></td>
+
+                            <td id="sp_ele4">
+                            </td>
+                            <td>SE </td>
+                            <td id="status_sp_ele4"></td>
+
+                        </tr>
+                        </tbody>
+                        <thead>
+                            <tr style="background-color: #EDEBEB">
+                                <th scope="col" style="text-align: center">Year 3</th>
+                                <th scope="col">Legend</th>
+                                <th scope="col">Status</th>
+                                <th scope="col" style="text-align: center">Year 3</th>
+                                <th scope="col">legend</th>
+                                <th scope="col">Status</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td id="hu_com"> </td>
+                                <td>CO </td>
+                                <td id="status_hu_com"> </td>
+
+
+                                <td id="cyber"></td>
+                                <td>CO</td>
+                                <td id="status_cyber"></td>
+
+                            </tr>
+                            <tr>
+                                <td id="ent_it"></td>
+                                <td>CO </td>
+                                <td id="status_ent_it"></td>
+
+                                <td id="cap"></td>
+                                <td>CO</td>
+                                <td id="status_cap"></td>
+
+                            </tr>
+                            <tr>
+                                <td id="sp_ele5">
+
+                    </div>
+
+                    </td>
+                    <td>SE </td>
+                    <td id="status_sp_ele5"></td>
+                    <td id="sp_ele6">
+
+        </div>
+        </td>
+        <td>SE </td>
+        <td id="status_sp_ele6"></td>
+        </tr>
+        <tr>
+            <td id="ele1">
+
+
+            </td>
+            <td>E </td>
+            <td id="status_ele1"></td>
+            <td id="ele2">
+
+            </td>
+            <td>E </td>
+            <td id="status_ele2"></td>
+        </tr>
+        </tbody>
+        </table>
+
+
+
+    </div>
+    </div>
+
+
+
+    <div id="notfound"></div>
+
+    </table>
+    <table>
+        <div id="box"></div><br>
+
+    </table>
+    <div class="row">
+        <div class="col-8" style=" margin:auto">
+
+            <table class="summary table table-bordered col-2 col-sm-8" style=" margin:auto">
+                <thead>
+                    <tr style="background-color: #EDEBEB">
+                        <th scope="col">Total Credit</th>
+                        <th scope="col" style="text-align:center">Total credit completed</th>
+                        <th scope="col">Total Credit Remain</th>
+                        <th scope="col"> Specilest elective </th>
+                        <th scope="col"> Elective Remain </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>240</td>
+                        <td id="ttl"></td>
+                        <td id="ttr"></td>
+                        <td>60</td>
+                        <td id="re"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="d-flex table-data">
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript but it is better to add it-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

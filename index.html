@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #FCFFFF;
+        }
+        .navbar{
+            background-color: #EDEBEB;
+
+        }
+        .nav-item{
+            color: #cf4f4f;
+
+
+        }
+        .jumbotron{
+            margin: 0 0 5px 0;
+            height:150px;
+            background-color: white;
+
+        }
+        .container{
+            margin-left: 50%;
+            margin-right:10%;
+
+
+        }
+
+        .img-fluid{
+            margin-top:-120px;
+
+            margin-left: 1000px;
+            width: 300px;
+            background-color: white;
+        }
+
+        .card-deck{
+            margin-top: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+
+
+            font-family: "Arial Black";
+        }
+        .container-sm {
+
+            text-align:center;
+
+            font-size: 30px;
+
+        }
+        .form-control{
+            width: 25%;
+
+        }
+        .card {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left: 10%;
+            margin-left:10%;
+            border-radius: 25px;
+            background-color:white;
+            width: 300px;
+
+
+        }
+
+        .card:hover {
+            box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .card > .card-inner {
+            padding:10px;
+        }
+        .card .header h2, h3 {
+            margin-bottom: 0px;
+            margin-top:0px;
+            font-size: 15px;
+            color:black;
+        }
+        .card .header {
+            margin-bottom:5px;
+        }
+        .card img{
+            width:100%;
+        }
+        .header{
+            font-size: 5px;
+            font-family: Arial;
+        }
+
+        #sticky-footer {
+            background-color: #EDEBEB;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+<div class="jumbotron">
+    <h1>CDU Course Management System </h1>
+
+    <img src="../logo.jpg" class="img-fluid" alt="Responsive image">
+
+
+</div>
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="level.html">Level</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" >Browse by Study Area</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="container-sm ">Browse by Study Area</div>
+
+
+    <div class="card-deck">
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Accounting</h2>
+                    </div>
+
+                    <a href="form.php"><button type="button" class="btn btn-outline-secondary">Explore</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Arts</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Business</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Community Services and Social Work</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Creative Arts and Design</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Culinary Arts</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Education</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Explore more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Exercise and Sport Science</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Hair and Beauty Services</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Health</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Humanitarian, Emergency and Disaster Management</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Humanities and Social Sciences</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Indigenous Knowledges</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>IT and Network Engineering</h2>
+                    </div>
+                    <a href="IT.html"><button type="button" class="btn btn-outline-secondary">Explore</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Languages</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Law and Legal Studies</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Nursing & Midwifery</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Pathway Courses</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Primary Industries</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Psychology</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Public Health</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Science, Environmental Science & Management</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Tourism and Hospitality</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>Trades</h2>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+<footer id="sticky-footer" class="py-4  text-black-60">
+
+    <small style="color: black">Copyright &copy; Your Website</small>
+
+</footer>
+</body>
+</html>

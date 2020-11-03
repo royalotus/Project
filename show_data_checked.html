@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags to make it mobile responsive-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 14px Arial;
+        }
+        /*the container must be positioned relative:*/
+
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+        }
+
+        input {
+            border: 1px solid transparent;
+            background-color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type=text] {
+            background-color: white;
+            border-top-right-radius: : 5%;
+            border-color: #f1f1f1;
+            width: 100%;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        /*when hovering an item:*/
+
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+        /*when navigating through the items using the arrow keys:*/
+
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+
+    <style>
+        body {
+            background-color: #FCFFFF;
+        }
+
+        .navbar {
+            background-color: #EDEBEB;
+        }
+
+        .nav-item {
+            color: #cf4f4f;
+        }
+
+        .jumbotron {
+            margin: 0 0 5px 0;
+            height: 150px;
+            background-color: white;
+        }
+
+        .img-fluid {
+            margin-top: -120px;
+            margin-left: 1000px;
+            width: 300px;
+            background-color: white;
+        }
+
+        .card-deck {
+            margin-top: 5px;
+            margin-left: 25%;
+            margin-right: 25%;
+            font-family: "Arial Black";
+        }
+
+        .container-sm {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .form-control {
+            width: 25%;
+        }
+
+        .card {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10%;
+            background-color: white;
+            width: 100px;
+        }
+
+        .card:hover {
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .card>.card-inner {
+            padding: 10px;
+        }
+
+        .card .header h2,
+        h3 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 15px;
+            color: black;
+        }
+
+        .card .header {
+            margin-bottom: 5px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .header {
+            font-size: 5px;
+            font-family: Arial;
+        }
+
+        #sticky-footer {
+            background-color: #EDEBEB;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .card-title a:hover {
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 2rem 0rem;
+        }
+
+        h4 {
+            margin: 2rem 0rem 1rem;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>CDU Course Management System </h1>
+
+        <img src="logo.jpg" class="img-fluid" alt="Responsive image">
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="level.html">Level<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Browse by Study Area</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1 style="text-align: center; font-size:x-large; margin-top: 25px; margin-bottom: 5px"> Status for Students Commencing in <br> Semester 1</h1>
+        <!-- Table  -->
+        <div class="container">
+            <table class="table-responsive">
+                <form action="action_handler.php" method="POST">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr style="background-color: #FCFFFF">
+                                <th scope="col">Legend</th>
+                                <th scope="col" style="font-weight:normal">CU = Common Unit</th>
+                                <th scope="col" style="font-weight:normal">CO = Core Unit</th>
+                                <th scope="col" style="font-weight:normal">SE = Specialist Elective</th>
+                                <th scope="col" style="font-weight:normal">E = Elective</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table-responsive">
+                        <table class="table" style="margin-bottom: 0.5%">
+                            <thead>
+                                <tr style="background-color: #FCFFFF">
+                                    <th scope="col" style="text-align: center">You have Completed the following Units </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </table>
+                    <table>
+                        <div id="box" ></div><br>
+
+                    </table>
+                    <table class="table-responsive">
+                        <table class="table" style="margin-bottom: 0.5%">
+                            <thead>
+                                <tr style="background-color: #FCFFFF">
+                                    <th scope="col" style="text-align: center">Units Remaining to complete </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </table>
+                    <table>
+                        <div id="unchecked_box"></div>
+                    </table>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        var b = localStorage.getItem("showallchecked");
+        var c = localStorage.getItem("showunchecked");
+        var checked_data_array = b.split(',');
+        var unchecked_data_array = c.split(',');
+
+        var html = "<table class='table table-bordered table-hover'>";
+        html += "<tr>";
+        html += "<td >" + "SN" + "</td>";
+        html += "<td>" + "Unit" + "</td>";
+        html += "<td>" + "Legend" + "</td>";
+        html += "<td>" + "Credit Point" + "</td>";
+
+        html += "</tr>";
+        for (var i = 0, z = 10, r = 0; i < checked_data_array.length; i++) {
+            var y = i + 1;
+            html += "<tr>";
+            html += "<td>" + y + "</td>";
+            html += "<td>" + checked_data_array[i] + "</td>";
+            html += "<td>" + "" + "</td>";
+            html += "<td>" + z + "</td>";
+            html += "</tr>";
+
+
+
+        }
+
+        html += "</table>";
+
+        var unchecked_html = "<table class='table table-bordered table-hover'>";
+        unchecked_html += "<tr>";
+        unchecked_html += "<td>" + "SN" + "</td>";
+        unchecked_html += "<td>" + "Unit" + "</td>";
+        unchecked_html += "<td>" + "Legend" + "</td>";
+        unchecked_html += "<td>" + "Credit Point" + "</td>";
+        unchecked_html += "</tr>";
+        for (var i = 0; i < unchecked_data_array.length; i++) {
+            var y = i + 1;
+            unchecked_html += "<tr>";
+            unchecked_html += "<td>" + y + "</td>";
+            unchecked_html += "<td>" + unchecked_data_array[i] + "</td>";
+            unchecked_html += "<td>" + "" + "</td>";
+            unchecked_html += "<td>" + z + "</td>";
+            unchecked_html += "</tr>";
+
+
+
+        }
+
+        unchecked_html += "</table>";
+
+        document.getElementById("box").innerHTML = html;
+        document.getElementById("unchecked_box").innerHTML = unchecked_html;
+
+
+    </script>
+    <!-- Optional JavaScript but it is better to add it-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

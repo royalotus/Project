@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>CDU Course Management System </h1>
+
+        <img src="logo.jpg" class="img-fluid" alt="Responsive image">
+
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="level.html">Level<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Browse by Study Area</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1 style="text-align: center; font-size:x-large; margin-top: 25px; margin-bottom: 5px"> Students Commencing in <br> Semester 1</h1>
+        <!-- Table  -->
+        <div class="container">
+            <table class="table-responsive">
+                <form>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr style="background-color: #FCFFFF">
+                                <th scope="col">Legend</th>
+                                <th scope="col" style="font-weight:normal">CU = Common Unit</th>
+                                <th scope="col" style="font-weight:normal">CO = Core Unit</th>
+                                <th scope="col" style="font-weight:normal">SE = Specialist Elective</th>
+                                <th scope="col" style="font-weight:normal">E = Elective</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <table class="table-responsive">
+                        <table class="table" style="margin-bottom: 0">
+                            <thead>
+                                <tr style="background-color: #FCFFFF">
+                                    <th scope="col" style="text-align: center">SEMESTER 1</th>
+                                    <th scope="col" style="text-align: center">SEMESTER 2</th>
+
+
+                                </tr>
+                            </thead>
+                        </table>
+                    </table>
+
+
+
+                    <div class="table-responsive">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr style="background-color: #EDEBEB">
+                                            <th scope="col" style="text-align: center">Year 1</th>
+                                            <th scope="col">Legend</th>
+                                            <th scope="col" style="width:5%">action</th>
+                                            <th scope="col" style="text-align: center">Year 1</th>
+                                            <th scope="col">legend</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size:15px; margin-right: 10px">
+
+                                                <strong style=" color: darkblue">CUC106</strong> <br> Design and Innovation: Communicating Technology </td>
+                                            <td>CU </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+
+                                                    <input type="checkbox" value="Design and Innovation: Communicating Technology (CUC106)" id="com_tech"> <br/>
+                                                </div>
+                                            </td>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">CUC107</strong> <br> Cultural Intelligence and Capability </td>
+
+                                            <td>CU</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox ">
+                                                    <input type="checkbox" value="Cultural Intelligence and Capability (CUC107)" id="cult_int"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT164</strong> <br> Computing Fundamentals </td>
+                                            <td>CO</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Computing Fundamentals (HIT164)" id="com_funda"> <br/>
+                                                </div>
+
+                                            </td>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">STA101</strong> <br> Statistics </td>
+                                            <td>CU</td>
+
+                                            <td>
+                                                <div class="custom-control custom-checkbox disable">
+                                                    <input type="checkbox" value="Statistics (STA101)" id="stat"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT172</strong> <br> Operating Systems and Applications </td>
+                                            <td>CO </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Operating Systems and Applications (HIT172)" id="os"> <br/>
+                                                </div>
+                                            </td>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT137</strong> <br> Software Now </td>
+                                            <td>CO</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Software Now (HIT137)" id="soft_now"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group md-form form-sm form-2 pl-0">
+                                                    <input class="form-control my-0 py-1 amber-border " type="text" name="myunits" placeholder="Search for elective units">
+                                                </div>
+                                            </td>
+                                            <td>E </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Elective" id="myInput1"> <br/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="input-group md-form form-sm form-2 pl-0">
+                                                    <input class="form-control my-0 py-1 amber-border " type="text" name="myunits" placeholder="Search for elective units">
+                                                </div>
+
+                                            </td>
+                                            <td>E</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" id="myInput2" value="Elective"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                    <!--------------------------Year 2------------------------------------------------------->
+                                    <thead>
+                                        <tr style="background-color: #EDEBEB">
+                                            <th scope="col" style="text-align: center">Year 2</th>
+                                            <th scope="col">Legend</th>
+                                            <th scope="col">action</th>
+                                            <th scope="col" style="text-align: center">Year 2</th>
+                                            <th scope="col">legend</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT226</strong> <br> Mobile Web Structures </td>
+                                            <td>CO </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input onchange="onCbChange('cbox')" id="mob_web" type="checkbox" value="Mobile Web Structures(HIT226)">
+
+                                                </div>
+                                            </td>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT274</strong> <br> Network Engineering Applications </td>
+                                            <td>CO</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Network Engineering Applications (HIT274)" id="net_eng"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT234</strong> <br> Database Concepts (replaces BIS234) </td>
+                                            <td>CO </td>
+                                            <td>
+                                                `
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Database Concepts (replaces BIS234) " id="db_con"> <br/>
+                                                </div>
+                                            </td>
+                                            <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">PMO201</strong> <br> Project Management </td>
+                                            <td>CO</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="Project Management (PMO201)" id="proj_mgmt"> <br/>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-8 col-md-12">
+
+                                                        <div class="input-group mb-12">
+                                                            <div class="input-group mb-12">
+                                                                <div class="input-group-prepend">
+                                                                    <label class="input-group-text" for="sem1">Units</label>
+                                                                </div>
+                                                                <select class="custom-select " id="sp_ele1">
+                                                    <option value="" >Choose the Specialist Elective</option>
+                                                    <option value="HIT237 - Building Interactive Software">HIT237 - Building Interactive Software</option>
+                                                    <option value="HIT326 - Database-Driven Web Applications">HIT326 - Database-Driven Web Applications</option>
+                                                    <option value="HIT332 - Embedded and Mobile Systems">HIT332 - Embedded and Mobile Systems</option>
+                                                    <option value="HIT353 - Business Intelligence and Data Mining">HIT353 - Business Intelligence and Data Mining</option>
+                                                    <option value="HIT365 - C Programming" >HIT365 - C Programming</option>
+                                                    <option value="HIT374 - Enterprise Network Engineering">HIT374 - Enterprise Network Engineering</option>
+                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </td>
+
+
+                                            <td>SE </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" value="specialize electrive" id="first_sem"> <br/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-8 col-md-12">
+
+
+                                                        <div class="input-group mb-12">
+                                                            <div class="input-group-prepend">
+                                                                <label class="input-group-text" for="sem2">Units</label>
+                                                            </div>
+                                                            <select class="custom-select " id="sp_ele2">
+                                                <option selected>Choose the Specialist Elective</option>
+                                                  <option value="HIT220 - Algorithms and Complexity">HIT220 - Algorithms and Complexity</option>
+                                                  <option value="HIT238 - The Mobile Paradigm">HIT238 - The Mobile Paradigm</option>
+                                                  <option value="HIT339 - Distributed Development">HIT339 - Distributed Development</option>
+                                                  <option value="HIT372 - Organisation Network Infrastructure">HIT372 - Organisation Network Infrastructure</option>
+
+                                          </div>
+
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+
+                                </td>
+                                <td>SE </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" value=" Specialist Elective"    > <a href="#" data-toggle="tooltip" ></a<br/>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                  <div class="row">
+                                      <div class="col-8 col-md-12">
+
+
+                                            <div class="input-group mb-12">
+                                              <div class="input-group-prepend">
+                                                  <label class="input-group-text" for="sem1">Units</label>
+                                              </div>
+                                              <select class="custom-select " id="sp_ele3">
+                                                  <option selected>Choose the Specialist Elective</option>
+                                                  <option value="HIT237 - Building Interactive Software">HIT237 - Building Interactive Software</option>
+                                                  <option value="HIT326 - Database-Driven Web Applications">HIT326 - Database-Driven Web Applications</option>
+                                                  <option value="HIT332 - Embedded and Mobile Systems">HIT332 - Embedded and Mobile Systems</option>
+                                                  <option value="HIT353 - Business Intelligence and Data Mining">HIT353 - Business Intelligence and Data Mining</option>
+                                                  <option value="HIT365 - C Programming" >HIT365 - C Programming</option>
+                                                  <option value="HIT374 - Enterprise Network Engineering">HIT374 - Enterprise Network Engineering</option>
+                                              </select>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+                            </div>
+
+
+
+                            </td>
+                            <td>SE </td>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" value=" Specialist Elective"> <br/>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-8 col-md-12">
+
+
+                                        <div class="input-group mb-12">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="sem2">Units</label>
+                                            </div>
+                                            <select class="custom-select " id="sp_ele4">
+                                                <option >Choose the Specialist Elective</option>
+                                                  <option value="HIT220 - Algorithms and Complexity">HIT220 - Algorithms and Complexity</option>
+                                                  <option value="HIT238 - The Mobile Paradigm">HIT238 - The Mobile Paradigm</option>
+                                                  <option value="HIT339 - Distributed Development">HIT339 - Distributed Development</option>
+                                                  <option value="HIT372 - Organisation Network Infrastructure">HIT372 - Organisation Network Infrastructure</option>
+
+                                          </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                                  </td>
+                                <td>SE </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" value=" Specialist Elective"    > <br/>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr style="background-color: #EDEBEB">
+                                <th scope="col" style="text-align: center" >Year 3</th>
+                                <th scope="col">Legend</th>
+                                <th scope="col">action</th>
+                                <th scope="col" style="text-align: center">Year 3</th>
+                                <th scope="col">legend</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT381</strong> <br> Human Computer Interaction Design  </td>
+                                <td>CO </td>
+                                <td>
+                                  <div class="custom-control custom-checkbox ">
+                                      <input onchange="ondbChange('dbox')"  id="hu_com" type="checkbox" value="Human Computer Interaction Design HIT381"  > <br/>
+                                  </div>
+                                </td>
+                                <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT333</strong> <br> Cyber Security (replaces BIS243)  </td>
+                                <td>CO</td>
+                                <td>
+                                  <div class="custom-control custom-checkbox ">
+                                      <input  type="checkbox" value="Cyber Security (replaces BIS243) HIT333"  id="cyber"  > <br/>
+                                  </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT363</strong> <br> Enterprise IT Management (replaces BIS342)  </td>
+                                <td>CO </td>
+                                <td>
+                                  <div class="custom-control custom-checkbox ">
+                                      <input type="checkbox" value="Enterprise IT Management (replaces BIS342) --  HIT363"  id="ent_it"> <br/>
+                                  </div>
+                                </td>
+                                <td style="font-size:15px; margin-right: 10px"><strong style=" color: darkblue">HIT401</strong> <br> Capstone Project </td>
+                                <td>CO</td>
+                                <td>
+                                  <div class="custom-control custom-checkbox ">
+                                      <input  type="checkbox" value="Capstone Project -- HIT401"  id="cap"  > <br/>
+                                  </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+
+                                  <div class="row">
+                                      <div class="col-8 col-md-12">
+
+
+                                            <div class="input-group mb-12">
+                                              <div class="input-group-prepend">
+                                                  <label class="input-group-text" for="">Units</label>
+                                              </div>
+                                              <select class="custom-select " id="sp_ele5">
+                                                  <option >Choose the Specialist Elective</option>
+                                                  <option value="HIT237 - Building Interactive Software">HIT237 - Building Interactive Software</option>
+                                                  <option value="HIT326 - Database-Driven Web Applications">HIT326 - Database-Driven Web Applications</option>
+                                                  <option value="HIT332 - Embedded and Mobile Systems">HIT332 - Embedded and Mobile Systems</option>
+                                                  <option value="HIT353 - Business Intelligence and Data Mining">HIT353 - Business Intelligence and Data Mining</option>
+                                                  <option value="HIT365 - C Programming" >HIT365 - C Programming</option>
+                                                  <option value="HIT374 - Enterprise Network Engineering">HIT374 - Enterprise Network Engineering</option>
+                                              </select>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                        </div>
+
+                        </td>
+                        <td>SE </td>
+                        <td>
+                            <div class="custom-control custom-checkbox ">
+                                <input type="checkbox" value="Specialist elective "> <br/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-8 col-md-12">
+
+
+                                    <div class="input-group mb-12">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="sem2">Units</label>
+                                        </div>
+                                        <select class="custom-select " id="sp_ele6">
+                                                <option selected>Choose...</option>
+                                                  <option value="HIT220 - Algorithms and Complexity">HIT220 - Algorithms and Complexity</option>
+                                                  <option value="HIT238 - The Mobile Paradigm">HIT238 - The Mobile Paradigm</option>
+                                                  <option value="HIT339 - Distributed Development">HIT339 - Distributed Development</option>
+                                                  <option value="HIT372 - Organisation Network Infrastructure">HIT372 - Organisation Network Infrastructure</option>
+
+                                          </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>  </td>
+                                <td>SE </td>
+                                <td>
+                                  <div class="custom-control custom-checkbox ">
+                                      <input  type="checkbox" value="Specialist elective "    > <br/>
+                                  </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td >
+                                  <div class="row">
+                                      <div class="col-8 col-md-12">
+
+                                          <div class="input-group mb-12">
+                                              <div class="input-group-prepend">
+                                                  <label class="input-group-text" for="elective">Units</label>
+                                              </div>
+                                              <select class="custom-select " id="ele1" >
+                                                  <option selected>Choose the Elective</option>
+                                                  <option value="HIT220 - Algorithms and Complexity">HIT220 - Algorithms and Complexity</option>
+                                                  <option value="HIT238 - The Mobile Paradigm">HIT238 - The Mobile Paradigm</option>
+                                                  <option value="HIT339 - Distributed Development">HIT339 - Distributed Development</option>
+                                                  <option value="HIT372 - Organisation Network Infrastructure">HIT372 - Organisation Network Infrastructure</option>
+
+                                              </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>E </td>
+                        <td>
+                            <div class="custom-control custom-checkbox ">
+                                <input type="checkbox" value="Elective "> <br/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-8 col-md-12">
+
+                                    <div class="input-group mb-12">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="elective">Units</label>
+                                        </div>
+                                        <select class="custom-select " id="ele2">
+                                                  <option selected>Choose the Elective</option>
+                                                  <option value="HIT220 - Algorithms and Complexity">HIT220 - Algorithms and Complexity</option>
+                                                  <option value="HIT238 - The Mobile Paradigm">HIT238 - The Mobile Paradigm</option>
+                                                  <option value="HIT339 - Distributed Development">HIT339 - Distributed Development</option>
+                                                  <option value="HIT372 - Organisation Network Infrastructure">HIT372 - Organisation Network Infrastructure</option>
+
+                                              </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </td>
+                        <td>E </td>
+                        <td>
+                            <div class="custom-control custom-checkbox ">
+                                <input type="checkbox" value="Elective "> <br/>
+                            </div>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <button class="btn btn-success" type="button" onclick='UnSelectAll()' value="Unselect All" style="margin-bottom: 1%">Unselect All</button>
+                        <button type="button" id="btn-create" class="btn btn-warning " style="margin-left:80%;margin-bottom: 1%">Submit</button>
+                        <a type="button" href="redirect.html" class="btn btn-success " style="margin-left:80%;margin-bottom: 1%">View Record</a>
+
+
+                    </div>
+        </div>
+
+
+    </div>
+    </form>
+    </table>
+
+
+
+    <!--  Table -->
+
+
+    <!-- Labels -->
+    <div class="w-100 btn btn-success insertmsg">
+        Data Inserted Successfully...!
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Include Dexie -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+    <!-- Custom main file-->
+    <script src="./js/root.js" type="module"></script>
+
+</body>
+
+</html>
